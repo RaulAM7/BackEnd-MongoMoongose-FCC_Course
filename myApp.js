@@ -1,5 +1,16 @@
 require('dotenv').config();
+const mongoose = require('mongoose')
 
+
+// Mongoose method para conectar con la base de datos --en este caso online subida a la nube de MongoDB Atlas--
+mongoose.connect(process.env.MONGO_URI, { useNewUrlParser: true, useUnifiedTopology: true })
+  .then(() => console.log('Conexión exitosa a MongoDB'))
+  .catch((error) => console.error('Error conectando a MongoDB:', error));
+
+
+/* FCC te dice que inclyas:
+mongoose.connect(<Your URI>, { useNewUrlParser: true, useUnifiedTopology: true });
+*/
 
 let Person;
 
