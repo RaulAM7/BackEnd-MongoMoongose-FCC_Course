@@ -4,18 +4,22 @@
   "description": "# MongoDB and Mongoose Challenges",
   "main": "myApp.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"
+  },
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "dotenv": "^8.2.0",
+    "express": "^4.12.4",
+    "mongoose": "^5.11.15"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/RaulAM7/BackEnd-MongoMoongose-FCC_Course.git"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/RaulAM7/BackEnd-MongoMoongose-FCC_Course/issues"
-  },
-  "homepage": "https://github.com/RaulAM7/BackEnd-MongoMoongose-FCC_Course#readme"
+  "keywords": [
+    "node",
+    "mongoose",
+    "express"
+  ],
+  "license": "MIT"
 }
