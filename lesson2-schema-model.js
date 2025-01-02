@@ -21,10 +21,10 @@ MODEL
 
 */
 
-/* 2.- Creating an Scheme para los Documents "Person" de la Collection "People"
+/* 2.1.- Creating an Scheme para los Documents "Person" de la Collection "People"
 */
 
-// Defining the scheme
+// Implementing the scheme
 const personSchema = new moongose.Schema
 (
     {
@@ -35,10 +35,26 @@ const personSchema = new moongose.Schema
     }
 )
 
-// Defining the model
+// Implementing the model
 
 const Person = moongose.model('Person', personSchema)
 
 
 
+
+
+
+/* 2.2- ¿Son los Mongoose Models un ORM?
+
+    No exactamente, porque no es Relational pero si:
+
+        - Mapea en POO los datos de MongoDB
+        - Al igual que las Endidades de Doctrine mapean con POO clases las Tablas, Los Model de Mongoose mapean con POO class las collections
+        - Tambien nos dan métodos para hacer CRUD de forma fácil sin queries 
+
+
+*/
+
+
+// Exporting the model
 module.exports = Person;
