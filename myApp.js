@@ -13,7 +13,20 @@ mongoose.connect(process.env.MONGO_URI, { useNewUrlParser: true, useUnifiedTopol
 mongoose.connect(<Your URI>, { useNewUrlParser: true, useUnifiedTopology: true });
 */
 
-let Person;
+
+// LESSON 2.- CREATING AN SCHEME AND A MODEL
+
+const personSchema = new mongoose.Schema
+(
+  {
+    name: {type: String, required: true},
+    age: Number,
+    favouriteFoods: [String],
+  }
+)
+
+const Person = mongoose.model('Person', personSchema)
+
 
 const createAndSavePerson = (done) => {
   done(null /*, data*/);
